@@ -11,13 +11,17 @@ import { JsonContent } from '../../models/json-content';
 export class HomeComponent {
   postsArr: Post[] = []; 
   firstPost!: Post;
+  randomPosts: Post[] = [];
 
   ngOnInit(){
     this.getposts().then(() =>{
       let firstPost = this.getFirstPost()
+
       if (firstPost){
         this.firstPost = firstPost ; 
       }
+
+      this.randomPosts = this.getRandomPost()
     })
 
   }
@@ -28,8 +32,16 @@ export class HomeComponent {
     this.postsArr = posts.posts
   }
 
+  //recupero il primo post da mettere in evidenza
   getFirstPost(){
     return this.postsArr.shift()
+  }
+
+
+  //per recuperare 4 post da mettere nell'ultima sezione 
+  getRandomPost(): Post[]{
+    const shuffled = [...this.postsArr].sort(() => 0.5 - Math.random()); 
+    return shuffled.slice(0, 4); 
   }
 
 
