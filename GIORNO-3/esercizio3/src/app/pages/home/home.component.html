@@ -1,0 +1,38 @@
+<h2>Post in evidenza</h2>
+<div id="featured-post">
+    <div class="row">
+        <div class="col-12 g-3 col-md-6 col-lg-3" *ngIf="firstPost">
+    
+            <div class="card">
+    
+                <div class="card-body">
+                    <h5 class="card-title">{{firstPost.title}}</h5>
+                    <p class="card-text">{{firstPost.body}}</p>
+                    
+                </div>
+            </div>
+    
+        </div>
+    </div>  
+
+</div>
+
+<hr>
+
+<!--CREAZIONE CARD-->
+<div class="row">
+    <div class="col-12 g-3 col-md-6 col-lg-3" *ngFor="let p of postsArr">
+
+        <div class="card">
+
+            <div class="card-body">
+                <h5 class="card-title">{{p.title}}</h5>
+                <p class="card-text">{{p.body}}</p>
+                
+            </div>
+        </div>
+
+    </div>
+</div>  
+
+<h2>Potrebbero piacerti anche:</h2>
