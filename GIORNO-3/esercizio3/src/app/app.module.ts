@@ -8,6 +8,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ActivePostsComponent } from './pages/active-posts/active-posts.component';
 import { InactivePostsComponent } from './pages/inactive-posts/inactive-posts.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { RouterModule } from '@angular/router';
+import { Page404Component } from './pages/page404/page404.component';
+
+
 
 @NgModule({
   declarations: [
@@ -17,6 +21,9 @@ import { DetailComponent } from './pages/detail/detail.component';
     ActivePostsComponent,
     InactivePostsComponent,
     DetailComponent,
+    Page404Component,
+  
+
   ],
   imports: [
     BrowserModule,

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InactivePostsComponent } from './inactive-posts.component';
+import { Page404Component } from './page404.component';
 
-describe('InactivePostsComponent', () => {
-  let component: InactivePostsComponent;
-  let fixture: ComponentFixture<InactivePostsComponent>;
+describe('Page404Component', () => {
+  let component: Page404Component;
+  let fixture: ComponentFixture<Page404Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InactivePostsComponent]
+      declarations: [Page404Component]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(InactivePostsComponent);
+    fixture = TestBed.createComponent(Page404Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
