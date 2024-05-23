@@ -8,6 +8,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{firstPost.title}}</h5>
                     <p class="card-text">{{firstPost.body}}</p>
+                    <a [routerLink]="['/detail',firstPost.id]" class="btn btn-primary">Dettaglio</a>
                     
                 </div>
             </div>
@@ -30,6 +31,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{p.title}}</h5>
                 <p class="card-text">{{p.body}}</p>
+                <a [routerLink]="['/detail',p.id]" class="btn btn-primary">Dettaglio</a>
                 
             </div>
         </div>
@@ -48,6 +50,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{p.title}}</h5>
                 <p class="card-text">{{p.body}}</p>
+                <a [routerLink]="['/detail',p.id]" class="btn btn-primary">Dettaglio</a>
                 
             </div>
         </div>

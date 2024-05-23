@@ -1,1 +1,21 @@
-<p>inactive-posts works!</p>
+<div class="container">
+    <div class="row"> 
+        <h2 class="pt-2 text-center" >Post Inattivi</h2>
+        
+        <div class="col-12 g-3 col-md-6 col-lg-3" *ngFor="let p of postsArr">
+          
+    
+            <div class="card">
+    
+                <div class="card-body">
+                    <h5 class="card-title">{{p.title}}</h5>
+                    <p class="card-text">{{p.body}}</p>
+                    <p>Status {{p.active ? 'Attivo':'Inattivo' }}</p>
+                    <a [routerLink]="['/detail',p.id]" class="btn btn-primary">Dettaglio</a>
+                    
+                </div>
+            </div>
+    
+        </div>
+    </div>  
+</div>
